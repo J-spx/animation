@@ -1,6 +1,6 @@
 let canvas;
 let ctx;
-let incrementor = 0;
+let incrementor = -60;
 let decrementor = 500;
 
 window.onload = function () {
@@ -15,11 +15,15 @@ window.onload = function () {
 function drawBoxxy() {
     ctx.fillStyle = "black";
     ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
-  
+    // Blue and red bar
     ctx.fillStyle = "blue";
-    ctx.fillRect(1, incrementor++, 50, 200);
-    ctx.fillStyle = "green";
-    ctx.fillRect(decrementor--, decrementor--, 50, 50);
+    ctx.fillRect(50, incrementor++, 50, 200);
     ctx.fillStyle = "red";
-    ctx.fillRect(601, decrementor--, 50, 200);
+    ctx.fillRect(550, decrementor--, 50, 200);
+    // Ball
+    ctx.beginPath();
+    ctx.arc(decrementor--, decrementor--, 16, 0, 2 * Math.PI);
+    ctx.fillStyle = "red";
+    ctx.fill();
+    ctx.stroke();
 }
