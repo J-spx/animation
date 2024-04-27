@@ -33,6 +33,6 @@ function drawBoxxy() {
     // Ball
     ctx.beginPath();
     ctx.arc(decrementor--, decrementor--, 16, 0, 2 * Math.PI);
-    ctx.fillStyle = "red";
+    ctx.fillStyle = "green";
     ctx.fill();
 }
