@@ -1,7 +1,7 @@
 let canvas;
 let ctx;
-let incrementor = -60;
-let decrementor = 500;
+let incrementor = 0;
+let decrementor = 520;
 
 window.onload = function () {
     canvas = document.getElementById("creativeCoding");
@@ -17,7 +17,7 @@ function drawBoxxy() {
 
     // Stadium divider Line
     ctx.beginPath();
-    ctx.lineWidth = "5"
+    ctx.lineWidth = "8"
     ctx.strokeStyle = "white";
     ctx.moveTo(300, 0);
     ctx.lineTo(innerHeight, 60000);
@@ -32,7 +32,7 @@ function drawBoxxy() {
 
     // Ball
     ctx.beginPath();
-    ctx.arc(decrementor--, decrementor--, 16, 0, 2 * Math.PI);
+    ctx.arc(decrementor--, decrementor-- + 80, 16, 0, 2 * Math.PI);
     ctx.fillStyle = "green";
     ctx.fill();
 }
