@@ -8,7 +8,7 @@ window.onload = function () {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     ctx = canvas.getContext("2d");
-    setInterval(drawBoxxy, 50);
+    setInterval(drawBoxxy, 30);
 }
 
 function drawBoxxy() {
